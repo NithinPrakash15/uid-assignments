@@ -1,0 +1,28 @@
+#custom-list {
+    list-style-type: circle; 
+}
+
+#custom-list li {
+    font-style: italic;
+}
+
+#custom-list a {
+    text-decoration: none;
+}
+
+#custom-list a:link {
+    color: blue; 
+}
+
+#custom-list a:visited {
+    color: purple;
+}
+
+#custom-list a:hover {
+    color: green; 
+    text-decoration: underline; 
+}
+
+#custom-list a:active {
+    color: red; 
+}
