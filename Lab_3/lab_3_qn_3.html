@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Layout</title>
+    <style>
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .image-container img {
+            flex: 1 1 200px; 
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://iso.500px.com/wp-content/uploads/2016/11/stock-photo-159533631-1500x1000.jpg" alt="Image 1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSip3oahkMVxgj_CLe2zxb_QIGShKt-erm38A&s" alt="Image 2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8_ydaSfJtbCm-ckl1HY82GdIf0GY9-Nykuw&s" alt="Image 3">
+    </div>
+</body>
+</html>
