@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Assignment 4</title>
+    <link rel="stylesheet" href="Lab_4_styles.css">
+</head>
+<body>
+    <h1>Place your orders here</h1>
+    <form>
+        <!-- Full Name -->
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required><br><br>
+
+        <!-- Gender -->
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+        <!-- Meal Type -->
+        <label for="mealType">Meal type:</label>
+        <select id="mealType" name="mealType">
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+        </select><br><br>
+
+        <!-- Choose your favorite -->
+        <label for="favoriteMeal">Choose your favorite:</label>
+        <select id="favoriteMeal" name="favoriteMeal">
+            <option value="meal1">Meal 1</option>
+            <option value="meal2">Meal 2</option>
+            <option value="meal3">Meal 3</option>
+        </select><br><br>
+
+        <!-- Customer’s photo with food -->
+        <label for="photo">Customer’s photo with food:</label>
+        <input type="file" id="photo" name="photo"><br><br>
+
+        <!-- Feedback -->
+        <label for="feedback">Your feedback here:</label><br>
+        <textarea id="feedback" name="feedback" placeholder="Enter your message here" rows="4" cols="50"></textarea><br><br>
+
+        <!-- Buttons -->
+        <button type="submit" class="button primary">Submit</button>
+        <button type="reset" class="button secondary">Reset</button>
+    </form>
+</body>
+</html>
