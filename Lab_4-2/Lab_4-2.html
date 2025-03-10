@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <style>
+        body {
+            background-color: #004d66;
+            color: white;
+            font-family: "Times New Roman", serif;
+            text-align: center;
+        }
+        form {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            background-color: #00334d;
+            border-radius: 10px;
+        }
+        input, select {
+            width: 40%;
+            padding: 5px;
+            margin: 5px;
+        }
+        .checkbox-group, .radio-group {
+            text-align: left;
+            margin-left: 25%;
+        }
+        .buttons {
+            margin-top: 10px;
+        }
+        button {
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .form-group label {
+            flex: 1;
+            text-align: right;
+            margin-right: 10px;
+        }
+        .form-group div {
+            flex: 2;
+            text-align: left;
+        }
+        .inline-group {
+            display: flex;
+            gap: 10px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            transform: scale(0.8);
+        }
+    </style>
+</head>
+<body>
+    <h1>Application Form</h1>
+    <form>
+        <div class="form-group">
+            <label>First Name:</label>
+            <input type="text">
+            <label>Last Name:</label>
+            <input type="text">
+        </div>
+        <div class="form-group">
+            <label>Date of Birth:</label>
+            <input type="date">
+            <label>Age:</label>
+            <input type="number">
+        </div>
+        <div class="form-group">
+            <label>Gender:</label>
+            <select>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+            <label>Email Address:</label>
+            <input type="email" placeholder="Enter email address">
+        </div>
+        <div class="form-group">
+            <label>Positions Available:</label>
+            <div class="inline-group">
+                <input type="radio" name="position"> Junior Developer
+                <input type="radio" name="position"> Mid-level Developer
+                <input type="radio" name="position"> Senior Developer
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Programming Languages:</label>
+            <div class="inline-group">
+                <input type="checkbox"> Java
+                <input type="checkbox"> JavaScript
+                <input type="checkbox"> Python
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Password:</label>
+            <input type="password">
+            <label>Confirm Password:</label>
+            <input type="password">
+        </div>
+        <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>
