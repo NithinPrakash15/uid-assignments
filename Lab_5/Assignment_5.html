@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Assignment 5</title>
+</head>
+<body>
+    <h1>JavaScript Assignment 5</h1>
+    <button onclick="printPattern()">Print Pattern</button>
+    <button onclick="calculateFactorial()">Find Factorial</button>
+    <button onclick="capitalizeSentence()">Capitalize Words</button>
+    <button onclick="checkTemperature()">Temperature Category</button>
+    <button onclick="daysUntilNewYear()">Days Until New Year</button>
+    <button onclick="findLocateIndex()">Find 'locate' Index</button>
+    <button onclick="randomFibonacci()">Random & Fibonacci</button>
+    <button onclick="findMaxValue()">Find Max in Array</button>
+    <button onclick="showBooks()">Show Books</button>
+
+    <script>
+ // 1. Pattern Printing
+        function printPattern() {
+            let pattern = "";
+            for (let i = 1; i <= 3; i++) {
+                pattern += '*'.repeat(i) + '\n';
+            }
+            alert(pattern.replace(/\n/g, '\n'));
+        }
+
+        // 2. Factorial Calculation
+        function calculateFactorial() {
+            const num = parseInt(prompt("Enter a number: "));
+            function factorial(n) {
+                return n <= 1 ? 1 : n * factorial(n - 1);
+            }
+            alert("Factorial: " + factorial(num));
+        }
+
+        // 3. Capitalize First Letter of Each Word
+        function capitalizeSentence() {
+            const sentence = prompt("Enter a sentence: ");
+            function capitalizeWords(sentence) {
+                return sentence.replace(/\b\w/g, char => char.toUpperCase());
+            }
+            alert(capitalizeWords(sentence));
+        }
+
+        // 4. Temperature Categorizer
+        function checkTemperature() {
+            const temp = parseFloat(prompt("Enter temperature: "));
+            if (temp < 0) alert("Freezing");
+            else if (temp <= 15) alert("Cold");
+            else if (temp <= 30) alert("Moderate");
+            else alert("Hot");
+        }
+
+        // 5. Days Left Until Next New Year
+        function daysUntilNewYear() {
+            const today = new Date();
+            const nextNewYear = new Date(today.getFullYear() + 1, 0, 1);
+            const diff = Math.ceil((nextNewYear - today) / (1000 * 60 * 60 * 24));
+            alert("Days until next New Year: " + diff);
+            alert(`Today's date is : ${today.toLocaleDateString('en-GB')}`);
+        }
+
+        // 6. Find Index of 'locate'
+        function findLocateIndex() {
+            const str = "Please locate where 'locate' occurs!";
+            alert("Index of 'locate': " + str.indexOf("locate"));
+        }
+
+        // 7. Random Number and Fibonacci Series
+        function randomFibonacci() {
+            const randNum = Math.floor(Math.random() * 10) + 1;
+            alert("Random Number: " + randNum);
+            function fibonacci(n) {
+                let a = 0, b = 1, output = "";
+                while (a < n) {
+                    output += a + " ";
+                    [a, b] = [b, a + b];
+                }
+                alert("Fibonacci: " + output);
+            }
+            fibonacci(randNum);
+        }
+
+        // 8. Find Highest Value in an Array
+        function findMaxValue() {
+            const arr = [5, 12, 8, 130, 44];
+            alert("Max value: " + Math.max(...arr));
+        }
+
+        // 9. Book Object
+        function showBooks() {
+            const books = [
+                { title: "My Experiments with Truth", author: "Mahatma Gandhi", cost: 300 },
+                { title: "JavaScript Guide", author: "John Doe", cost: 600 },
+                { title: "History of India", author: "Mahatma Gandhi", cost: 700 }
+            ];
+
+            alert("Books costing more than 500:\n" + books.filter(book => book.cost > 500).map(book => book.title).join("\n"));
+            alert("Books by Mahatma Gandhi:\n" + books.filter(book => book.author === "Mahatma Gandhi").map(book => book.title).join("\n"));
+        }
+    </script>
+</body>
+</html>
