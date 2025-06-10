@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle Button</title>
+</head>
+<body>
+    <button id="toggleButton" onclick="toggleText()">Show</button>
+
+    <script>
+        function toggleText() {
+            let button = document.getElementById("toggleButton");
+            button.textContent = button.textContent === "Show" ? "Hide" : "Show";
+        }
+    </script>
+</body>
+</html>
